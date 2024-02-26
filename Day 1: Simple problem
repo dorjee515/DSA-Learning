@@ -1,1 +1,23 @@
+#include<bits/stdc++.h>
+#define ll long long int
+using namespace std;
 
+int printN (int n) {
+   //base condition
+   if (n == 0)
+      return 0;
+
+   cout << n << endl;
+   return printN(n - 1);
+}
+
+int main() {
+#ifndef ONLINE_JUDGE
+   freopen("input.txt", "r", stdin);
+   freopen("output.txt", "w", stdout);
+#endif
+   int n;
+   cin >> n;
+   printN(n);
+   return 0;
+}
